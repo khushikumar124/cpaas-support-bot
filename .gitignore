@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables (all variants — never commit real values)
+.env
+.env.*
+!.env.example
+
+# Google / service-account credentials
+service-account.json
+*service-account*.json
+!service-account-example.json
+*.pem
+*.key
+
+# Node
+node_modules/
+frontend/dist/
+
+# Editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db

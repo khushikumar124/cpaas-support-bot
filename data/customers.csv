@@ -1,0 +1,11 @@
+customer_id,company_name,account_manager,status,primary_gateway
+CUST001,Acme Retail Pvt Ltd,Priya Sharma,active,470
+CUST002,Beta Logistics Ltd,Rahul Mehta,active,531
+CUST003,Cirrus Fintech Pvt Ltd,Anita Rao,active,612
+CUST004,Delta Health Services Ltd,Vikram Singh,inactive,704
+CUST005,Everest EdTech Pvt Ltd,Priya Sharma,active,815
+CUST006,Frontier Travel Ltd,Neha Kulkarni,suspended,926
+CUST007,Gamma Media Networks Pvt Ltd,Rahul Mehta,active,1043
+CUST008,Horizon Bank Ltd,Arjun Nair,active,1157
+CUST009,Indus Grocers Pvt Ltd,Neha Kulkarni,inactive,1268
+CUST010,Juno Mobility Pvt Ltd,Arjun Nair,active,1390

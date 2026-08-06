@@ -1,0 +1,11 @@
+gateway_id,company_name,region,status,created_date
+470,Acme Retail Pvt Ltd,IN,active,2023-06-01
+531,Beta Logistics Ltd,IN,active,2023-09-15
+612,Cirrus Fintech Pvt Ltd,IN,active,2023-11-02
+704,Delta Health Services Ltd,IN,inactive,2024-01-20
+815,Everest EdTech Pvt Ltd,IN,active,2024-02-11
+926,Frontier Travel Ltd,SG,suspended,2024-03-05
+1043,Gamma Media Networks Pvt Ltd,IN,active,2024-04-18
+1157,Horizon Bank Ltd,IN,active,2024-06-09
+1268,Indus Grocers Pvt Ltd,AE,inactive,2024-07-22
+1390,Juno Mobility Pvt Ltd,SG,active,2024-09-13

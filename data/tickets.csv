@@ -1,0 +1,15 @@
+ticket_id,number,subject,status,priority,created_date
+TKT001,9152001212,OTP delivery failure,open,high,2024-05-10
+TKT002,8100881008,Promotional route suspended,resolved,medium,2024-04-22
+TKT003,9223071030,Latency on transactional route,open,high,2024-05-12
+TKT004,9876543210,DLR mismatch investigation,in_progress,low,2024-05-01
+TKT005,8800115566,Sender ID rejected by operator,open,high,2024-06-03
+TKT006,9988776655,Number deactivation request,resolved,low,2024-06-14
+TKT007,7700334455,Gateway suspended after billing hold,open,high,2024-06-28
+TKT008,9330012345,Promotional traffic throttled at peak hours,in_progress,medium,2024-07-09
+TKT009,8455227788,Toll free number not reachable from BSNL,open,medium,2024-07-21
+TKT010,9123454422,Missed call webhook not firing,resolved,medium,2024-08-02
+TKT011,8455229911,Bulk campaign delivery delay,in_progress,high,2024-08-19
+TKT012,7011445566,Account reactivation after inactivity,open,low,2024-09-04
+TKT013,9660117744,DID provisioning stuck in pending,resolved,medium,2024-09-27
+TKT014,9152004488,Toll free IVR routing misconfiguration,in_progress,high,2024-10-15

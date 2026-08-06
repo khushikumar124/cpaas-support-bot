@@ -1,0 +1,31 @@
+number,status,operator,company_name,gateway_id,provisioned_date,number_type
+9152001212,active,Airtel,Acme Retail Pvt Ltd,470,2024-01-15,transactional
+8100881008,suspended,Jio,Acme Retail Pvt Ltd,470,2024-02-20,promotional
+9152004488,active,IDEA,Acme Retail Pvt Ltd,470,2024-02-28,Toll free
+9152007733,active,Airtel,Acme Retail Pvt Ltd,470,2024-05-06,Dedicated Incoming SMS
+9223071030,active,IDEA,Beta Logistics Ltd,531,2024-03-01,transactional
+9876543210,active,Airtel,Beta Logistics Ltd,531,2024-04-12,transactional
+9223078812,inactive,BSNL,Beta Logistics Ltd,531,2023-10-19,promotional
+9223074455,active,TATA,Beta Logistics Ltd,531,2024-06-21,did
+8800112233,active,Jio,Cirrus Fintech Pvt Ltd,612,2024-01-08,transactional
+8800119977,active,Airtel,Cirrus Fintech Pvt Ltd,612,2024-03-17,Toll free
+8800115566,suspended,IDEA,Cirrus Fintech Pvt Ltd,612,2024-07-30,promotional
+9988776655,inactive,Jio,Delta Health Services Ltd,704,2023-12-05,promotional
+9988771122,inactive,Airtel,Delta Health Services Ltd,704,2023-12-05,transactional
+9123456789,active,Airtel,Everest EdTech Pvt Ltd,815,2023-08-30,transactional
+9123454422,active,TATA,Everest EdTech Pvt Ltd,815,2024-02-14,Dedicated Missed call
+9123458899,active,Jio,Everest EdTech Pvt Ltd,815,2024-04-02,transactional
+7700334455,suspended,BSNL,Frontier Travel Ltd,926,2024-03-11,promotional
+7700338866,suspended,Airtel,Frontier Travel Ltd,926,2024-03-11,transactional
+9330012345,active,IDEA,Gamma Media Networks Pvt Ltd,1043,2024-04-25,promotional
+9330016789,active,Jio,Gamma Media Networks Pvt Ltd,1043,2024-05-19,Toll free
+9330019900,active,Airtel,Gamma Media Networks Pvt Ltd,1043,2024-08-07,did
+8455221100,active,Airtel,Horizon Bank Ltd,1157,2024-06-15,transactional
+8455223344,active,TATA,Horizon Bank Ltd,1157,2024-06-15,Dedicated Incoming SMS
+8455227788,active,Jio,Horizon Bank Ltd,1157,2024-09-01,Toll free
+8455229911,inactive,IDEA,Horizon Bank Ltd,1157,2024-10-12,promotional
+7011445566,inactive,BSNL,Indus Grocers Pvt Ltd,1268,2024-07-28,promotional
+7011449988,inactive,Jio,Indus Grocers Pvt Ltd,1268,2024-07-28,transactional
+9660112233,active,Airtel,Juno Mobility Pvt Ltd,1390,2024-09-20,transactional
+9660117744,active,IDEA,Juno Mobility Pvt Ltd,1390,2024-10-05,did
+9660119955,active,TATA,Juno Mobility Pvt Ltd,1390,2024-11-11,Dedicated Missed call

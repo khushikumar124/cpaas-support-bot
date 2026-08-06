@@ -1,0 +1,13 @@
+source_id,gateway_id,line_type,status,host,port
+SRC001,470,SMPP,active,smpp1.example.com,2775
+SRC002,531,SMPP,active,smpp2.example.com,2775
+SRC003,612,HTTP,active,api.example.com,443
+SRC004,704,SMPP,inactive,smpp-legacy.example.com,2775
+SRC005,815,SMPP,active,smpp3.example.com,2775
+SRC006,926,HTTP,suspended,api-sg.example.com,443
+SRC007,1043,SMPP,active,smpp4.example.com,2775
+SRC008,1157,SMPP,active,smpp-secure.example.com,3550
+SRC009,1157,HTTP,active,api-bank.example.com,443
+SRC010,1268,SMPP,inactive,smpp-ae.example.com,2775
+SRC011,1390,HTTP,active,api-sg2.example.com,443
+SRC012,1390,SMPP,active,smpp5.example.com,2775
