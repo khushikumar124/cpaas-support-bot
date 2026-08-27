@@ -29,3 +29,141 @@ number,status,operator,company_name,gateway_id,provisioned_date,number_type
 9660112233,active,Airtel,Juno Mobility Pvt Ltd,1390,2024-09-20,transactional
 9660117744,active,IDEA,Juno Mobility Pvt Ltd,1390,2024-10-05,did
 9660119955,active,TATA,Juno Mobility Pvt Ltd,1390,2024-11-11,Dedicated Missed call
+8178898636,inactive,TATA,Kinetic Sports Pvt Ltd,1493,2023-06-25,promotional
+7976025454,active,Airtel,Kinetic Sports Pvt Ltd,1493,2023-02-13,promotional
+9941527986,active,Airtel,Kinetic Sports Pvt Ltd,1493,2024-03-26,Toll free
+7530185152,active,IDEA,Kinetic Sports Pvt Ltd,1493,2025-03-30,transactional
+8610838915,suspended,Airtel,Kinetic Sports Pvt Ltd,1493,2025-09-19,transactional
+6562710233,active,Jio,Lumen Energy Ltd,1555,2025-04-07,Toll free
+9227549807,active,Airtel,Lumen Energy Ltd,1555,2024-07-04,Toll free
+6419180418,active,TATA,Lumen Energy Ltd,1555,2024-08-27,transactional
+8604678973,active,Jio,Lumen Energy Ltd,1555,2025-01-03,transactional
+9780180070,active,BSNL,Lumen Energy Ltd,1555,2024-10-31,transactional
+8418918285,active,TATA,Lumen Energy Ltd,1555,2023-10-07,transactional
+7303832348,suspended,IDEA,Lumen Energy Ltd,1555,2024-01-30,promotional
+7702240318,active,Airtel,Meridian Insurance Pvt Ltd,1639,2023-10-26,transactional
+9942886387,active,Airtel,Meridian Insurance Pvt Ltd,1639,2024-08-08,promotional
+7412701289,active,Airtel,Meridian Insurance Pvt Ltd,1639,2024-08-27,Toll free
+8362354833,active,TATA,Meridian Insurance Pvt Ltd,1639,2025-09-06,promotional
+6313635196,inactive,Jio,Meridian Insurance Pvt Ltd,1639,2025-10-23,promotional
+7287151763,inactive,IDEA,Meridian Insurance Pvt Ltd,1639,2025-10-03,promotional
+9324809129,active,Jio,Nimbus Cloud Services Ltd,1687,2023-06-18,promotional
+8110437860,active,Airtel,Nimbus Cloud Services Ltd,1687,2023-05-30,did
+8901007285,active,Airtel,Nimbus Cloud Services Ltd,1687,2023-10-25,did
+9799400729,active,Jio,Nimbus Cloud Services Ltd,1687,2025-08-10,transactional
+9989905906,inactive,Airtel,Orbit Payments Pvt Ltd,1740,2025-10-13,promotional
+8218521863,suspended,TATA,Orbit Payments Pvt Ltd,1740,2023-11-09,did
+7819178098,suspended,Airtel,Orbit Payments Pvt Ltd,1740,2025-12-12,transactional
+8746379857,active,Airtel,Orbit Payments Pvt Ltd,1740,2024-08-18,Toll free
+7270502488,inactive,TATA,Pinnacle Realty Ltd,1783,2024-09-01,promotional
+9669312114,inactive,Airtel,Pinnacle Realty Ltd,1783,2023-04-30,Dedicated Missed call
+9726775405,suspended,Airtel,Pinnacle Realty Ltd,1783,2024-04-06,transactional
+8828472504,active,IDEA,Pinnacle Realty Ltd,1783,2024-11-24,Dedicated Missed call
+7511192492,suspended,Airtel,Pinnacle Realty Ltd,1783,2025-06-17,promotional
+9882007125,inactive,BSNL,Pinnacle Realty Ltd,1783,2024-03-09,promotional
+8881768825,active,Airtel,Quasar Analytics Pvt Ltd,1818,2025-05-06,transactional
+8677706465,active,TATA,Quasar Analytics Pvt Ltd,1818,2023-02-08,promotional
+9103114741,active,BSNL,Quasar Analytics Pvt Ltd,1818,2023-03-01,did
+8847353460,suspended,BSNL,Quasar Analytics Pvt Ltd,1818,2024-06-28,did
+6897934784,active,Airtel,Quasar Analytics Pvt Ltd,1818,2024-07-03,Dedicated Incoming SMS
+7796382879,active,Airtel,Quasar Analytics Pvt Ltd,1818,2024-07-25,Toll free
+6992431562,active,TATA,Quasar Analytics Pvt Ltd,1818,2024-12-29,promotional
+9464302074,active,IDEA,Radiant Pharma Ltd,1895,2023-03-03,transactional
+7834427929,active,BSNL,Radiant Pharma Ltd,1895,2024-05-13,transactional
+9549436754,active,BSNL,Radiant Pharma Ltd,1895,2023-05-06,promotional
+8676413003,active,BSNL,Radiant Pharma Ltd,1895,2023-08-21,transactional
+8115080403,active,Airtel,Summit Auto Pvt Ltd,1977,2025-07-07,Toll free
+9284510670,active,BSNL,Summit Auto Pvt Ltd,1977,2023-10-26,Toll free
+6231612077,active,Jio,Summit Auto Pvt Ltd,1977,2023-10-18,Dedicated Incoming SMS
+8684636706,active,IDEA,Summit Auto Pvt Ltd,1977,2023-06-08,promotional
+8744624704,active,Jio,Summit Auto Pvt Ltd,1977,2024-06-26,transactional
+6260821003,active,IDEA,Tandem Staffing Ltd,2045,2025-12-18,promotional
+8144086461,active,IDEA,Tandem Staffing Ltd,2045,2024-07-26,promotional
+8231907174,active,IDEA,Tandem Staffing Ltd,2045,2025-12-17,transactional
+9231107422,inactive,Jio,Tandem Staffing Ltd,2045,2024-08-29,transactional
+6888347066,active,Jio,Tandem Staffing Ltd,2045,2024-03-02,promotional
+6402009758,active,IDEA,Umbra Security Pvt Ltd,2110,2025-10-27,Dedicated Missed call
+8386412596,active,Jio,Umbra Security Pvt Ltd,2110,2023-01-11,did
+8399961342,inactive,BSNL,Umbra Security Pvt Ltd,2110,2024-06-25,Dedicated Missed call
+9544408144,active,BSNL,Umbra Security Pvt Ltd,2110,2024-10-10,promotional
+7324862993,inactive,IDEA,Umbra Security Pvt Ltd,2110,2025-04-02,did
+8286482415,suspended,Jio,Vertex Foods Ltd,2168,2023-06-26,did
+7993202491,inactive,BSNL,Vertex Foods Ltd,2168,2024-08-16,transactional
+7506299851,active,BSNL,Vertex Foods Ltd,2168,2024-05-30,transactional
+7794487201,suspended,Airtel,Westline Shipping Pvt Ltd,2227,2025-07-31,transactional
+9847144827,inactive,IDEA,Westline Shipping Pvt Ltd,2227,2024-01-16,Dedicated Missed call
+8826587582,active,TATA,Westline Shipping Pvt Ltd,2227,2023-05-03,transactional
+8820446091,active,TATA,Westline Shipping Pvt Ltd,2227,2023-11-28,promotional
+6231814808,active,Airtel,Westline Shipping Pvt Ltd,2227,2025-09-20,Toll free
+7475311983,suspended,Jio,Westline Shipping Pvt Ltd,2227,2024-08-01,Toll free
+8649852913,active,TATA,Westline Shipping Pvt Ltd,2227,2024-07-30,did
+8387632581,active,TATA,Xenon Telecom Ltd,2307,2025-11-16,transactional
+6215746754,active,BSNL,Xenon Telecom Ltd,2307,2023-09-18,transactional
+9456466528,suspended,BSNL,Xenon Telecom Ltd,2307,2025-01-14,transactional
+6249373849,active,BSNL,Xenon Telecom Ltd,2307,2024-03-24,promotional
+7306146759,inactive,IDEA,Xenon Telecom Ltd,2307,2023-07-03,transactional
+9490831209,active,Jio,Yield Agritech Pvt Ltd,2385,2025-08-02,promotional
+7533953929,inactive,Airtel,Yield Agritech Pvt Ltd,2385,2025-10-02,transactional
+6378381214,inactive,Jio,Yield Agritech Pvt Ltd,2385,2024-04-10,promotional
+9690903385,inactive,TATA,Yield Agritech Pvt Ltd,2385,2024-11-04,promotional
+6355180273,active,Jio,Yield Agritech Pvt Ltd,2385,2024-07-06,promotional
+7610917233,active,IDEA,Yield Agritech Pvt Ltd,2385,2023-07-03,did
+6863891400,suspended,TATA,Zenith Hotels Ltd,2426,2023-05-28,transactional
+6810536334,active,Airtel,Zenith Hotels Ltd,2426,2024-07-12,promotional
+8428659421,active,TATA,Zenith Hotels Ltd,2426,2023-02-09,Toll free
+9496762096,active,Jio,Zenith Hotels Ltd,2426,2023-06-25,transactional
+9375701420,active,TATA,Zenith Hotels Ltd,2426,2025-01-19,promotional
+9473783465,inactive,Airtel,Zenith Hotels Ltd,2426,2025-12-30,promotional
+6782314375,active,Jio,Aurora Fashion Pvt Ltd,2490,2024-06-19,promotional
+6566421295,active,IDEA,Aurora Fashion Pvt Ltd,2490,2023-07-29,promotional
+9656300028,suspended,Airtel,Aurora Fashion Pvt Ltd,2490,2025-02-08,promotional
+6785259823,inactive,IDEA,Aurora Fashion Pvt Ltd,2490,2025-11-22,Toll free
+8924093076,active,IDEA,Aurora Fashion Pvt Ltd,2490,2024-06-02,promotional
+7123002408,active,TATA,Aurora Fashion Pvt Ltd,2490,2023-08-24,promotional
+9359369908,active,IDEA,Beacon Legal Services Ltd,2569,2023-12-26,did
+6105701183,inactive,Airtel,Beacon Legal Services Ltd,2569,2023-04-07,promotional
+8282798105,active,BSNL,Beacon Legal Services Ltd,2569,2023-06-27,Dedicated Missed call
+8120192404,active,Jio,Beacon Legal Services Ltd,2569,2024-01-14,Dedicated Incoming SMS
+9464320325,active,IDEA,Beacon Legal Services Ltd,2569,2023-03-25,Dedicated Incoming SMS
+8404927847,active,TATA,Beacon Legal Services Ltd,2569,2024-03-24,Dedicated Missed call
+6445731833,active,TATA,Beacon Legal Services Ltd,2569,2023-01-07,transactional
+9280314200,inactive,BSNL,Cobalt Manufacturing Pvt Ltd,2617,2025-04-09,promotional
+6227352381,inactive,Jio,Cobalt Manufacturing Pvt Ltd,2617,2024-11-07,transactional
+6863428204,inactive,BSNL,Cobalt Manufacturing Pvt Ltd,2617,2024-06-15,Dedicated Missed call
+8626792582,inactive,TATA,Cobalt Manufacturing Pvt Ltd,2617,2023-07-06,transactional
+7253863025,active,BSNL,Cobalt Manufacturing Pvt Ltd,2617,2025-05-21,transactional
+6938198212,active,Jio,Cobalt Manufacturing Pvt Ltd,2617,2025-08-29,Dedicated Missed call
+7416039034,active,BSNL,Cobalt Manufacturing Pvt Ltd,2617,2024-06-10,transactional
+6820486225,suspended,TATA,Drift Mobility Ltd,2708,2025-02-19,promotional
+7146663227,inactive,Airtel,Drift Mobility Ltd,2708,2025-04-25,transactional
+9845549843,inactive,TATA,Drift Mobility Ltd,2708,2025-10-18,Toll free
+9226105881,inactive,Jio,Drift Mobility Ltd,2708,2025-02-14,promotional
+7655220828,active,Airtel,Drift Mobility Ltd,2708,2024-05-26,Toll free
+7233760634,active,IDEA,Cobalt Manufacturing Pvt Ltd,2775,2025-09-11,Toll free
+9502599965,active,Airtel,Cobalt Manufacturing Pvt Ltd,2775,2025-01-30,Toll free
+6884071790,active,IDEA,Cobalt Manufacturing Pvt Ltd,2775,2023-02-07,transactional
+6492444711,active,Jio,Cobalt Manufacturing Pvt Ltd,2775,2025-08-29,Toll free
+8698971547,inactive,Jio,Kinetic Sports Pvt Ltd,2808,2025-04-11,promotional
+6198191061,active,TATA,Kinetic Sports Pvt Ltd,2808,2025-12-25,transactional
+6487667608,suspended,Jio,Kinetic Sports Pvt Ltd,2808,2025-11-15,transactional
+8195443292,active,TATA,Kinetic Sports Pvt Ltd,2808,2025-12-30,promotional
+8445279330,active,Jio,Kinetic Sports Pvt Ltd,2808,2025-03-27,Toll free
+7392548431,inactive,BSNL,Kinetic Sports Pvt Ltd,2808,2025-04-11,transactional
+7650214670,active,Jio,Zenith Hotels Ltd,2831,2023-03-03,did
+7310936970,active,Airtel,Zenith Hotels Ltd,2831,2024-04-11,promotional
+6186723258,active,IDEA,Zenith Hotels Ltd,2831,2024-09-02,Dedicated Missed call
+7318577253,active,TATA,Zenith Hotels Ltd,2831,2024-02-25,Toll free
+6848842393,active,Jio,Lumen Energy Ltd,2894,2024-09-06,Toll free
+6371454421,active,IDEA,Lumen Energy Ltd,2894,2023-07-06,transactional
+8848563740,active,BSNL,Lumen Energy Ltd,2894,2024-04-14,transactional
+6194785909,active,TATA,Lumen Energy Ltd,2894,2023-12-23,promotional
+7648533973,inactive,IDEA,Lumen Energy Ltd,2894,2024-07-17,promotional
+9512273930,inactive,Jio,Lumen Energy Ltd,2894,2025-11-16,transactional
+9470363810,active,IDEA,Nimbus Cloud Services Ltd,2944,2023-12-25,transactional
+9718699678,active,Jio,Nimbus Cloud Services Ltd,2944,2025-09-30,transactional
+8999134080,active,TATA,Nimbus Cloud Services Ltd,2944,2023-09-27,did
+6208629980,inactive,IDEA,Meridian Insurance Pvt Ltd,3001,2025-02-28,transactional
+8408195494,active,BSNL,Meridian Insurance Pvt Ltd,3001,2023-01-06,transactional
+9851951951,active,IDEA,Meridian Insurance Pvt Ltd,3001,2023-11-27,promotional
+6894302124,active,TATA,Meridian Insurance Pvt Ltd,3001,2023-08-12,transactional
+8232969450,active,Jio,Meridian Insurance Pvt Ltd,3001,2024-11-20,transactional

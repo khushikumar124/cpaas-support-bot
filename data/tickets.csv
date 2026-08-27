@@ -13,3 +13,64 @@ TKT011,8455229911,Bulk campaign delivery delay,in_progress,high,2024-08-19
 TKT012,7011445566,Account reactivation after inactivity,open,low,2024-09-04
 TKT013,9660117744,DID provisioning stuck in pending,resolved,medium,2024-09-27
 TKT014,9152004488,Toll free IVR routing misconfiguration,in_progress,high,2024-10-15
+TKT015,6402009758,Duplicate message delivery,resolved,medium,2023-11-24
+TKT016,9330019900,Toll free number not reachable,resolved,high,2025-08-20
+TKT017,7702240318,OTP delivery failure,open,high,2025-11-12
+TKT018,9847144827,DLR mismatch investigation,resolved,medium,2023-10-25
+TKT019,8924093076,Webhook callbacks not received,open,high,2024-07-02
+TKT020,9123458899,Number porting request,resolved,high,2023-08-08
+TKT021,9941527986,Route change request for peak hours,open,medium,2024-05-08
+TKT022,9780180070,Rate limit errors during campaign,in_progress,medium,2023-06-13
+TKT023,6992431562,Billing discrepancy on monthly invoice,resolved,medium,2025-04-05
+TKT024,7253863025,SMPP bind failing intermittently,in_progress,low,2024-03-07
+TKT025,6785259823,TLS certificate expiry on SMPP bind,resolved,medium,2025-03-28
+TKT026,7610917233,TLS certificate expiry on SMPP bind,open,high,2025-10-27
+TKT027,7011445566,Sender ID rejected by operator,in_progress,high,2024-03-17
+TKT028,9544408144,Throughput below contracted TPS,resolved,medium,2024-06-19
+TKT029,9330019900,Failover route not engaging,open,low,2024-10-20
+TKT030,9330019900,DID provisioning stuck in pending,open,high,2025-01-07
+TKT031,9470363810,OTP delivery failure,open,low,2025-06-03
+TKT032,7650214670,Sender ID rejected by operator,open,high,2024-02-06
+TKT033,8901007285,Rate limit errors during campaign,resolved,medium,2023-04-08
+TKT034,6105701183,Rate limit errors during campaign,open,high,2025-04-12
+TKT035,8362354833,Missed call webhook not firing,resolved,low,2024-02-14
+TKT036,7412701289,Number porting request,resolved,medium,2024-12-13
+TKT037,6863891400,Duplicate message delivery,resolved,high,2024-06-14
+TKT038,6260821003,Duplicate message delivery,resolved,low,2025-05-30
+TKT039,7650214670,Missed call webhook not firing,open,medium,2024-12-04
+TKT040,7270502488,Operator blocking template mismatch,open,high,2023-03-16
+TKT041,8826587582,Failover route not engaging,open,low,2023-08-05
+TKT042,8626792582,Sender ID rejected by operator,resolved,low,2024-11-05
+TKT043,7655220828,Delivery reports delayed by several hours,resolved,medium,2025-04-20
+TKT044,8115080403,Toll free number not reachable,resolved,medium,2024-07-15
+TKT045,7318577253,Failover route not engaging,resolved,high,2023-07-13
+TKT046,7253863025,Duplicate message delivery,open,low,2025-08-21
+TKT047,6782314375,Long code deactivation request,open,high,2023-06-09
+TKT048,8178898636,Unicode messages arriving garbled,resolved,low,2023-09-11
+TKT049,8676413003,Toll free number not reachable,resolved,low,2024-09-03
+TKT050,7324862993,TLS certificate expiry on SMPP bind,resolved,low,2023-07-08
+TKT051,9988771122,Account reactivation after inactivity,resolved,medium,2023-06-27
+TKT052,8282798105,Duplicate message delivery,resolved,low,2025-11-14
+TKT053,9152001212,Toll free number not reachable,resolved,low,2025-10-26
+TKT054,9123454422,Latency on transactional route,resolved,high,2023-08-30
+TKT055,7324862993,Sender ID registration pending,resolved,medium,2023-05-15
+TKT056,9851951951,Operator blocking template mismatch,resolved,high,2025-05-31
+TKT057,9876543210,Delivery reports delayed by several hours,in_progress,low,2025-05-02
+TKT058,6888347066,DLR mismatch investigation,resolved,medium,2024-06-02
+TKT059,9876543210,Rate limit errors during campaign,open,medium,2023-01-04
+TKT060,6194785909,Missed call webhook not firing,resolved,high,2025-04-11
+TKT061,7324862993,Operator blocking template mismatch,open,low,2025-03-03
+TKT062,6194785909,Toll free number not reachable,resolved,high,2025-11-08
+TKT063,8231907174,Toll free number not reachable,resolved,low,2025-07-07
+TKT064,8800112233,Account reactivation after inactivity,resolved,medium,2023-06-07
+TKT065,9780180070,DLR mismatch investigation,resolved,high,2023-10-24
+TKT066,6894302124,Sender ID rejected by operator,resolved,medium,2024-07-14
+TKT067,7511192492,Bulk campaign delivery delay,resolved,medium,2023-11-17
+TKT068,8881768825,Missed call webhook not firing,resolved,low,2024-08-17
+TKT069,8428659421,Delivery reports delayed by several hours,open,low,2025-07-11
+TKT070,7416039034,Webhook callbacks not received,resolved,medium,2023-09-20
+TKT071,8744624704,Long code deactivation request,resolved,low,2024-12-08
+TKT072,8744624704,Unicode messages arriving garbled,in_progress,medium,2024-09-11
+TKT073,8847353460,TLS certificate expiry on SMPP bind,open,medium,2025-03-27
+TKT074,9456466528,Webhook callbacks not received,open,low,2023-08-16
+TKT075,8120192404,Missed call webhook not firing,open,medium,2025-10-31

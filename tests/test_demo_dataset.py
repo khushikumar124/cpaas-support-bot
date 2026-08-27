@@ -90,6 +90,52 @@ def test_every_customer_points_at_a_real_gateway() -> None:
         )
 
 
+def test_vmn_company_matches_its_gateways_owner() -> None:
+    """A number's company_name must agree with the gateway it sits on."""
+    source = CSVDataSource()
+    owner = {
+        row["gateway_id"]: row["company_name"]
+        for row in source.get_records("gateways")
+    }
+    for row in source.get_records("vmn"):
+        assert row["company_name"] == owner[row["gateway_id"]], (
+            f"number {row['number']} says {row['company_name']!r} but gateway "
+            f"{row['gateway_id']} belongs to {owner[row['gateway_id']]!r}"
+        )
+
+
+def test_identifiers_are_unique() -> None:
+    source = CSVDataSource()
+    for sheet, column in [
+        ("vmn", "number"),
+        ("gateways", "gateway_id"),
+        ("customers", "customer_id"),
+        ("tickets", "ticket_id"),
+        ("source_information", "source_id"),
+    ]:
+        values = [row[column] for row in source.get_records(sheet)]
+        duplicates = {v for v in values if values.count(v) > 1}
+        assert not duplicates, f"duplicate {column} in {sheet}: {sorted(duplicates)}"
+
+
+def test_dataset_is_large_enough_to_be_interesting() -> None:
+    """
+    Guards against a regenerate that silently shrinks the data. A demo with
+    four rows per sheet makes list queries and filters look pointless.
+    """
+    source = CSVDataSource()
+    minimums = {
+        "vmn": 100,
+        "tickets": 50,
+        "source_information": 40,
+        "gateways": 25,
+        "customers": 25,
+    }
+    for sheet, minimum in minimums.items():
+        count = len(source.get_records(sheet))
+        assert count >= minimum, f"{sheet} has only {count} rows (expected >= {minimum})"
+
+
 def test_every_source_points_at_a_real_gateway() -> None:
     source = CSVDataSource()
     gateway_ids = {row["gateway_id"] for row in source.get_records("gateways")}
