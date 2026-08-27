@@ -9,7 +9,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
-from config import ANSWER_GENERATION, BOT_API_KEY, CORS_ALLOWED_ORIGINS, DEMO_MODE
+from config import (
+    ANSWER_GENERATION,
+    BOT_API_KEY,
+    CORS_ALLOWED_ORIGINS,
+    DEMO_MODE,
+    SLACK_BOT_TOKEN,
+    SLACK_SIGNING_SECRET,
+)
 from context.memory import ConversationMemory, ContextResolver
 from core.answer_generator import get_answer_generator
 from core.bot_service import BotService
@@ -69,6 +76,15 @@ class QueryResponse(BaseModel):
     context_used: bool = Field(
         default=False,
         description="True if the answer was informed by conversation context.",
+    )
+    # Structured view of the same result. The plain `answer` string stays the
+    # contract for text-only clients (n8n/Slack); richer clients use these to
+    # render cards without re-parsing the prose.
+    entity_type: str = Field(default="", description="Resolved entity type.")
+    action: str = Field(default="", description="'lookup' or 'list'.")
+    source: str = Field(default="", description="Sheet the rows came from.")
+    records: list[dict] = Field(
+        default_factory=list, description="Rows the answer was built from."
     )
 
 def get_service() -> BotService:
@@ -183,4 +199,39 @@ def query(body: QueryRequest) -> QueryResponse:
             else:
                 logger.info("Answer generation unavailable — using formatter output")
 
-    return QueryResponse(answer=answer, context_used=context_used)
+    return QueryResponse(
+        answer=answer,
+        context_used=context_used,
+        entity_type=parsed.entity_type,
+        action=parsed.action,
+        source=result.source,
+        records=result.records if result.success else [],
+    )
+
+
+# --- Optional Slack surface -------------------------------------------------
+# Mounted only when both Slack settings are present, so the demo and the CLI
+# are unaffected when they are not.
+def _answer_for_slack(question: str, conversation_id: str) -> str:
+    """Adapter seam: turn a Slack message into the bot's plain-text answer."""
+    return query(
+        QueryRequest(question=question, conversation_id=conversation_id)
+    ).answer
+
+
+if SLACK_BOT_TOKEN and SLACK_SIGNING_SECRET:
+    from slack_adapter import build_router
+
+    app.include_router(
+        build_router(
+            signing_secret=SLACK_SIGNING_SECRET,
+            bot_token=SLACK_BOT_TOKEN,
+            answer_question=_answer_for_slack,
+        )
+    )
+    logger.info("Slack adapter mounted at POST /slack/events")
+else:
+    logger.info(
+        "Slack adapter not mounted "
+        "(set SLACK_BOT_TOKEN and SLACK_SIGNING_SECRET to enable)."
+    )

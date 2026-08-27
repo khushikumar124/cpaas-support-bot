@@ -75,6 +75,12 @@ CORS_ALLOWED_ORIGINS: list[str] = [
     if origin.strip()
 ] or (_DEMO_ORIGINS if DEMO_MODE else [])
 
+# --- Slack (optional) ---
+# The /slack/events endpoint only mounts when BOTH of these are set. Leave
+# them empty and the app runs exactly as before, with no Slack surface.
+SLACK_BOT_TOKEN: str = os.getenv("SLACK_BOT_TOKEN", "").strip()
+SLACK_SIGNING_SECRET: str = os.getenv("SLACK_SIGNING_SECRET", "").strip()
+
 # --- Logging ---
 LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
 

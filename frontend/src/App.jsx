@@ -3,9 +3,11 @@ import ChatWindow from "./components/ChatWindow.jsx";
 import ChatInput from "./components/ChatInput.jsx";
 import QuickCommandsPanel from "./components/QuickCommandsPanel.jsx";
 import Sidebar from "./components/Sidebar.jsx";
+import SlackView from "./slack/SlackView.jsx";
 import { sendQuery } from "./services/api.js";
 
 const STORAGE_KEY = "cpaas-support-bot.chat-history.v1";
+const VIEW_KEY = "cpaas-support-bot.view.v1";
 
 function createId() {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
@@ -95,6 +97,32 @@ function dedupeById(items) {
 }
 
 export default function App() {
+  // The Slack view is the default surface: it is how this bot actually ran in
+  // production. The plain web app remains available for a side-by-side look.
+  const [view, setView] = useState(() => {
+    try {
+      return window.localStorage.getItem(VIEW_KEY) ?? "slack";
+    } catch {
+      return "slack";
+    }
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem(VIEW_KEY, view);
+    } catch {
+      /* storage unavailable — the choice just will not persist */
+    }
+  }, [view]);
+
+  if (view === "slack") {
+    return <SlackView onSwitchView={() => setView("web")} />;
+  }
+
+  return <WebAppView onSwitchView={() => setView("slack")} />;
+}
+
+function WebAppView({ onSwitchView }) {
   const savedWorkspace = useMemo(() => loadSavedWorkspace(), []);
   const [chats, setChats] = useState(savedWorkspace.chats);
   const [folders, setFolders] = useState(savedWorkspace.folders);
@@ -291,6 +319,13 @@ export default function App() {
           <h1 className="truncate text-sm font-semibold text-slate-800 sm:text-base">
             {activeChat?.title ?? "CPaaS Support Assistant"}
           </h1>
+          <button
+            type="button"
+            onClick={onSwitchView}
+            className="ml-auto shrink-0 rounded-lg border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-600 transition hover:border-slate-300 hover:bg-slate-50"
+          >
+            View as Slack →
+          </button>
         </header>
 
         {error && (
