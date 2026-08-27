@@ -80,7 +80,7 @@ A thin **integration layer only** — see [§3](#3-why-n8n-is-only-an-integratio
 ### FastAPI (`api.py`)
 The single source of truth for all business logic. Exposes two endpoints:
 - `GET /health` — unauthenticated liveness check.
-- `POST /query` — the one integration point any client (Slack via n8n, the dev frontend, or a future client) uses. Requires the `X-API-Key` header. See [the API section of the README](../README.md#api).
+- `POST /query` — the one integration point any client (Slack, the React frontend, the CLI, or a future client) uses. Requires the `X-API-Key` header. See [the API section of the README](../README.md#api).
 
 `api.py` itself only orchestrates: it resolves conversation context, calls `BotService.ask()`, updates conversation memory on success, optionally runs answer generation, and returns the response. It does not implement parsing, retrieval, or formatting itself — those live in `core/`, `parsers/`, `datasources/`, and `formatter.py`.
 
@@ -90,7 +90,7 @@ Used in two independent places:
 2. **Answer generation** (`core/answer_generator.py` → `llm/service.py`) — optional; turns the retrieved records into a natural-language sentence. Controlled by `ANSWER_GENERATION` (default `true`). If disabled, unavailable (no API key), or the call fails, the deterministic `ResponseFormatter` output is used instead — the user always gets an answer either way.
 
 ### Google Sheets
-The production data backend (`datasources/google_sheets_source.py`), read via a Google service account with `spreadsheets.readonly` scope. Data is organized into five logical "sheets" (`vmn`, `gateways`, `customers`, `tickets`, `source_information`), each resolved to a worksheet **tab** by trying a list of candidate tab names (so minor naming differences like "Gateway details" vs "Gateways" don't break the integration). Column headers are mapped to canonical field names via a per-sheet alias table, so header wording differences ("Account Name" vs "Company" vs "Company Name") all normalize to the same field (`company_name`). Results are cached in-process for `SHEETS_CACHE_TTL_SECONDS` (default 60s) per sheet to reduce API calls.
+The live data backend option (`datasources/google_sheets_source.py`), read via a Google service account with `spreadsheets.readonly` scope. Data is organized into five logical "sheets" (`vmn`, `gateways`, `customers`, `tickets`, `source_information`), each resolved to a worksheet **tab** by trying a list of candidate tab names (so minor naming differences like "Gateway details" vs "Gateways" don't break the integration). Column headers are mapped to canonical field names via a per-sheet alias table, so header wording differences ("Account Name" vs "Company" vs "Company Name") all normalize to the same field (`company_name`). Results are cached in-process for `SHEETS_CACHE_TTL_SECONDS` (default 60s) per sheet to reduce API calls.
 
 An equivalent CSV-backed implementation (`datasources/csv_source.py`) exists for local development and tests and implements the same `DataSource` interface — see [§6](#6-how-new-data-sources-can-be-added).
 
@@ -102,7 +102,7 @@ The FastAPI layer always returns structured JSON: `{"answer": "...", "context_us
 All parsing, routing, retrieval, memory, and formatting logic lives in the Python backend (`core/`, `parsers/`, `datasources/`, `context/`, `formatter.py`), not in n8n, for concrete reasons:
 
 - **Single source of truth.** The backend is independently testable (see `tests/`) and has an explicit, typed contract (`models.py`: `ParsedQuery`, `RetrievalResult`). Logic expressed as n8n nodes/expressions is much harder to unit test, code-review, or diff in version control.
-- **Client independence.** Slack is the current production client, but the same `/query` endpoint already served the development React frontend and could serve a CLI (`app.py`) or a future client without any duplication of logic.
+- **Client independence.** Slack is the primary target client, but the same `/query` endpoint also serves the React frontend and the CLI (`app.py`), and could serve a future client, without any duplication of logic.
 - **Consistency.** If routing rules, entity normalization, or answer formatting lived partly in n8n, behavior would diverge between clients (Slack vs. any future integration) and be far easier to get subtly wrong.
 
 ## 4. Why n8n Is Only an Integration Layer

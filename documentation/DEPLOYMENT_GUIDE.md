@@ -11,7 +11,7 @@
 |---|---|
 | Python | 3.11+ recommended (the codebase uses modern type-hint syntax such as `str \| None`, which requires 3.10+). |
 | pip | For installing `requirements.txt`. |
-| A Google Cloud project | For the Sheets service account (production data backend). |
+| A Google Cloud project | For the Sheets service account (live data backend option). |
 | A Google Sheet | Pre-populated with the five expected tabs (see [§7](#7-google-sheet-configuration)). |
 | An OpenAI API key | For LLM-based parsing and (optionally) answer generation. |
 | An n8n instance | Self-hosted or cloud, reachable by Slack and able to reach the FastAPI backend. |
@@ -60,7 +60,7 @@ Copy `.env.example` to `.env` in the project root and fill in the values below. 
 | `LOG_LEVEL` | Standard Python logging level. | `INFO` |
 | `ANSWER_GENERATION` | `true`/`false` — enable OpenAI-generated natural-language answers on top of the deterministic formatter. | `true` |
 | `BOT_API_KEY` | Shared secret required in the `X-API-Key` header on every `/query` request. **Required in production** — the endpoint fails closed (rejects all requests) if this is unset. | *(none)* |
-| `CORS_ALLOWED_ORIGINS` | Comma-separated browser origins allowed via CORS. Only relevant if the dev frontend is used; leave empty in production. | *(empty)* |
+| `CORS_ALLOWED_ORIGINS` | Comma-separated browser origins allowed via CORS. Only relevant if the React frontend is used; leave empty when no browser client talks to the API. | *(empty)* |
 
 ## 5. OpenAI Setup
 
@@ -119,7 +119,7 @@ uvicorn api:app --reload --port 8000
 #         -d '{"question": "status of 9152001212", "conversation_id": "test-user"}'
 ```
 
-The React frontend (`frontend/`) began as a development tool for exercising the API while building it, and was not part of the production Slack deployment. In this demo build it is the primary interface. To run it locally: `cd frontend && npm install && npm run dev` — the Vite dev server proxies `/query` and `/health` to `http://127.0.0.1:8000`, so no `frontend/.env` is needed unless the API runs elsewhere.
+The React frontend (`frontend/`) exercises the same `/query` API as any other client, and is the primary interface in this demo build. A Slack deployment would not use it. To run it locally: `cd frontend && npm install && npm run dev` — the Vite dev server proxies `/query` and `/health` to `http://127.0.0.1:8000`, so no `frontend/.env` is needed unless the API runs elsewhere.
 
 ## 9. Deploying to a GCP VM
 
