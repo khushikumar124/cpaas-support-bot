@@ -2,7 +2,7 @@
 
 > See also: [ARCHITECTURE.md](./ARCHITECTURE.md) for how the pieces fit together, [the API section of the README](../README.md#api) for the endpoint contract n8n depends on, [Production notes in the README](../README.md#production-notes) for the production readiness checklist.
 
-> **Demo build.** This repository is the public demo of the project: it ships fictional CSV data and runs with no API keys. Sections below describing Google Sheets, Slack, or n8n document the original production deployment and are not required to run the demo. See the [README](../README.md).
+> **Demo build.** This repository is the public demo of the project: it ships fictional CSV data and runs with no API keys. Sections below describing Google Sheets, Slack, or n8n describe an optional production deployment and are not required to run the demo. See the [README](../README.md).
 
 
 ## 1. Prerequisites

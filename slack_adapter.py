@@ -1,13 +1,13 @@
 """
 Slack Events API adapter.
 
-The original production deployment put n8n between Slack and this service:
+A common deployment shape puts n8n between Slack and this service:
 
     Slack → n8n (Slack Trigger → HTTP Request → reply in thread) → POST /query
 
-n8n did no business logic; it only relayed the message and posted the answer
-back. This module is the same relay implemented directly, so the project can
-talk to Slack without an orchestration tool in the middle.
+n8n does no business logic there; it only relays the message and posts the
+answer back. This module is the same relay implemented directly, so the project
+can talk to Slack without an orchestration tool in the middle.
 
 It is entirely optional. The adapter only mounts when SLACK_BOT_TOKEN and
 SLACK_SIGNING_SECRET are set — the demo runs without either.

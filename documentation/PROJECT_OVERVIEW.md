@@ -2,7 +2,7 @@
 
 > See also: [ARCHITECTURE.md](./ARCHITECTURE.md) for system design, [the README](../README.md) for day-to-day usage.
 
-> **Demo build.** This repository is the public demo of the project: it ships fictional CSV data and runs with no API keys. Sections below describing Google Sheets, Slack, or n8n document the original production deployment and are not required to run the demo. See the [README](../README.md).
+> **Demo build.** This repository is the public demo of the project: it ships fictional CSV data and runs with no API keys. Sections below describing Google Sheets, Slack, or n8n describe an optional production deployment and are not required to run the demo. See the [README](../README.md).
 
 
 ## 1. Project Objective

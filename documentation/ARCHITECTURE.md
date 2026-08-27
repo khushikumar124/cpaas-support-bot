@@ -2,7 +2,7 @@
 
 > See also: [PROJECT_OVERVIEW.md](./PROJECT_OVERVIEW.md) for the business context, [`registry/sheet_registry.py`](../registry/sheet_registry.py) for the code-level module map, [the API section of the README](../README.md#api) for the `/query` contract.
 
-> **Demo build.** This repository is the public demo: it ships fictional CSV data and runs with no API keys. This document describes the full system, including the Google Sheets backend and the Slack/n8n integration used in the original deployment — neither of which is required to run the demo. See the [README](../README.md) for what is and isn't included here.
+> **Demo build.** This repository is the public demo: it ships fictional CSV data and runs with no API keys. This document describes the full system, including the optional Google Sheets backend and Slack/n8n integration — neither of which is required to run the demo. See the [README](../README.md) for what is and isn't included here.
 
 ## 1. Overall System Architecture
 

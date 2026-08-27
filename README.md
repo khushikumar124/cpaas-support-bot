@@ -32,11 +32,9 @@ Support staff used to answer these questions by opening a Google Sheet, finding
 the right tab, searching for an identifier, and cross-referencing other tabs for
 every follow-up. This turns that into one question in a chat box.
 
-> **About this repository.** I originally built this during my internship at
-> Netcore Cloud, where it was deployed as a Slack bot backed by the team's live
-> Google Sheets. **This is a standalone demo build.** All data in `data/` is
-> fictional, and no proprietary data or credentials are included. It runs
-> entirely offline against bundled CSVs.
+> **About this repository.** All data in `data/` is fictional and the project
+> runs entirely offline against bundled CSVs — no API keys, no database, no
+> external services required.
 
 ---
 
@@ -77,10 +75,10 @@ python -m pytest tests/ -q
 
 ## Two interfaces
 
-The bot ran in production as a **Slack app**, so the demo opens on a
-Slack-style workspace — that is the interface it was actually built for. A
-plain web chat view is one click away in the sidebar if you want to see the
-same API driven a different way.
+The bot is designed to live in **Slack**, so the demo opens on a Slack-style
+workspace — that is the interface it was built for. A plain web chat view is
+one click away in the sidebar if you want to see the same API driven a
+different way.
 
 The Slack view is a **faithful UI simulation, not a live Slack connection**:
 it renders in the browser and talks to the same local `/query` endpoint. Every
@@ -325,15 +323,15 @@ What the adapter handles:
 Signature verification is covered by `tests/test_slack_adapter.py` — forged
 secrets, tampered bodies, replayed timestamps, and missing headers.
 
-### The original production path
+### Running it behind n8n instead
 
-The internship deployment put **n8n** between Slack and this service:
+An alternative deployment puts **n8n** between Slack and this service:
 
 ```
 Slack → n8n (Slack Trigger → HTTP Request → reply in thread) → POST /query
 ```
 
-n8n held no business logic; it only relayed the message and posted the answer
+n8n holds no business logic; it only relays the message and posts the answer
 back. `slack_adapter.py` is that same relay implemented in-process, which is why
 `/query` remains the single integration point either way.
 
@@ -341,10 +339,9 @@ back. `slack_adapter.py` is that same relay implemented in-process, which is why
 
 ## Production notes
 
-The original deployment used **Slack → n8n → this API → Google Sheets**, with
-n8n relaying messages and replying in-thread, and the Slack user ID as the
-`conversation_id`. That integration isn't part of this repo — `/query` is the
-single integration point, so any client can sit in front of it.
+A production deployment would run **Slack → this API → Google Sheets**, either
+through the built-in adapter or with n8n relaying messages in between. `/query`
+is the single integration point, so any client can sit in front of it.
 
 Known limitations, carried over honestly:
 
