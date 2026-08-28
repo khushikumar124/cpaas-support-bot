@@ -32,12 +32,13 @@ Support staff used to answer these questions by opening a Google Sheet, finding
 the right tab, searching for an identifier, and cross-referencing other tabs for
 every follow-up. This turns that into one question in a chat box.
 
-> **About this repository.** I originally built this during my internship,
-> working with a support team's live operations data. This repo is a
-> standalone rebuild for portfolio use: all data in `data/` is fictional, no
-> proprietary data or credentials are included, and the project runs entirely
-> offline against bundled CSVs — no API keys, no database, no external
-> services required.
+> **About this repository.** I originally built this during my internship at
+> **Netcore Cloud** in Mumbai, Maharashtra, where it was deployed as a Slack
+> bot backed by the team's live Google Sheets. This repo is a standalone
+> rebuild for portfolio use: all data in `data/` is fictional, no proprietary
+> data or credentials are included, and the project runs entirely offline
+> against bundled CSVs — no API keys, no database, no external services
+> required.
 
 ---
 
